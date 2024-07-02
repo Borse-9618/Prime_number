@@ -1,0 +1,16 @@
+pipeline {
+agent any
+stages {
+stage('Build') {
+steps{
+script{
+sh rm -r 'prime'
+sh 'git clone "https://github.com/Borse-9618/Prime_number.git"'
+sh 'cd prime'
+echo 'build'
+sh 'g++ prime_number.cpp'
+}
+}
+}
+}
+}
